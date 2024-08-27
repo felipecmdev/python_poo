@@ -36,10 +36,10 @@ class Carro:
             raise Exception("Erro: Não é possível acelerar! Motor desligado!")
         
     def get_tanque(self):
-        print(self.__tanque)    
+        return self.__tanque    
 
     def get_odometro(self):
-        print(self.__odometro)
+        return self.__odometro
     def desligar(self):
         if self.__motor_on:
             self.__motor_on = False
@@ -49,7 +49,7 @@ class Carro:
     def __str__(self):
         info = (f'Carro {self.modelo}, marca {self.marca}, '
                 f'cor {self.cor}\n{self.__odometro} Km, '
-                f'motor {self.motor_on}, '
+                f'motor {self.__motor_on}, '
                 f'__tanque {self.__tanque}, consumo {self.consumo}')
         return info
 
